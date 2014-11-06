@@ -1,1 +1,0 @@
-{% if editmode or previewmode %}{% include "2013-FAQ" %}{% else %}{% include "splash"%}{% endif %}

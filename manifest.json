@@ -15,13 +15,6 @@
       "file": "components/submenu.tpl"
     },
     {
-      "title": "SiteHeader",
-      "layout_name": "siteheader",
-      "content_type": "component",
-      "component": true,
-      "file": "components/siteheader.tpl"
-    },
-    {
       "title": "Front page",
       "layout_name": "front_page",
       "content_type": "page",
@@ -36,13 +29,6 @@
       "file": "layouts/common_page.tpl"
     },
     {
-      "title": "Common page(no download)",
-      "layout_name": "common_page_no_download_",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/common_page_no_download_.tpl"
-    },
-    {
       "title": "B-sides",
       "layout_name": "b-sides",
       "content_type": "page",
@@ -50,25 +36,11 @@
       "file": "layouts/b-sides.tpl"
     },
     {
-      "title": "FAQ",
-      "layout_name": "faq",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/faq.tpl"
-    },
-    {
       "title": "2014-Common page",
       "layout_name": "2014-common_page",
       "content_type": "component",
       "component": true,
       "file": "components/2014-common_page.tpl"
-    },
-    {
-      "title": "2013-Common page",
-      "layout_name": "2013-common_page",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2013-common_page.tpl"
     },
     {
       "title": "2014-Siteheader",
@@ -106,34 +78,6 @@
       "file": "components/splash.tpl"
     },
     {
-      "title": "2013-B-sides",
-      "layout_name": "2013-b-sides",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2013-b-sides.tpl"
-    },
-    {
-      "title": "2013-Front page",
-      "layout_name": "2013-front_page",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2013-front_page.tpl"
-    },
-    {
-      "title": "2013-Common page(no download)",
-      "layout_name": "2013-common_page_no_download_",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2013-common_page_no_download_.tpl"
-    },
-    {
-      "title": "2013-FAQ",
-      "layout_name": "2013-faq",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2013-faq.tpl"
-    },
-    {
       "title": "2014-Front page",
       "layout_name": "2014-front_page",
       "content_type": "component",
@@ -150,42 +94,6 @@
   ],
   "assets": [
     {
-      "kind": "stylesheet",
-      "filename": "ie.css",
-      "file": "stylesheets/ie.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "image",
-      "filename": "body-bg.gif",
-      "file": "images/body-bg.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "logo.gif",
-      "file": "images/logo.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "tape.gif",
-      "file": "images/tape.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "body-bg-front.gif",
-      "file": "images/body-bg-front.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "javascript",
-      "filename": "soundmanager2-nodebug-jsmin.js",
-      "file": "javascripts/soundmanager2-nodebug-jsmin.js",
-      "content_type": "application/x-javascript"
-    },
-    {
       "kind": "javascript",
       "filename": "360player.js",
       "file": "javascripts/360player.js",
@@ -195,12 +103,6 @@
       "kind": "javascript",
       "filename": "berniecode-animator.js",
       "file": "javascripts/berniecode-animator.js",
-      "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "javascript",
-      "filename": "excanvas.js",
-      "file": "javascripts/excanvas.js",
       "content_type": "application/x-javascript"
     },
     {
@@ -217,20 +119,8 @@
     },
     {
       "kind": "image",
-      "filename": "icon_loading_dots.gif",
-      "file": "images/icon_loading_dots.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
       "filename": "icon_loading_spinner_bigger.gif",
       "file": "images/icon_loading_spinner_bigger.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "icon_loading_spinner.gif",
-      "file": "images/icon_loading_spinner.gif",
       "content_type": "image/gif"
     },
     {
@@ -240,106 +130,10 @@
       "content_type": "text/css"
     },
     {
-      "kind": "image",
-      "filename": "360-button-pause-light.gif",
-      "file": "images/360-button-pause-light.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "360-button-pause-light.png",
-      "file": "images/360-button-pause-light.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "360-button-pause.gif",
-      "file": "images/360-button-pause.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "360-button-pause.png",
-      "file": "images/360-button-pause.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "fb.png",
-      "file": "images/fb.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "fbh.png",
-      "file": "images/fbh.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "360-button-play-light.gif",
-      "file": "images/360-button-play-light.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "360-button-play-light.png",
-      "file": "images/360-button-play-light.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "360-button-play.gif",
-      "file": "images/360-button-play.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "360-button-play.png",
-      "file": "images/360-button-play.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "cb.jpg",
-      "file": "images/cb.jpg",
-      "content_type": "image/jpeg"
-    },
-    {
-      "kind": "image",
-      "filename": "b.jpg",
-      "file": "images/b.jpg",
-      "content_type": "image/jpeg"
-    },
-    {
-      "kind": "image",
-      "filename": "b.gif",
-      "file": "images/b.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "background-nomenu.gif",
-      "file": "images/background-nomenu.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "bsides.png",
-      "file": "images/bsides.png",
-      "content_type": "image/png"
-    },
-    {
       "kind": "stylesheet",
       "filename": "faq.css",
       "file": "stylesheets/faq.css",
       "content_type": "text/css"
-    },
-    {
-      "kind": "image",
-      "filename": "facebook.png",
-      "file": "images/facebook.png",
-      "content_type": "image/png"
     },
     {
       "kind": "stylesheet",
@@ -468,52 +262,10 @@
       "content_type": "text/css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "style.css",
-      "file": "stylesheets/style.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "javascript",
-      "filename": "soundmanager2.js",
-      "file": "javascripts/soundmanager2.js",
-      "content_type": "application/x-javascript"
-    },
-    {
       "kind": "javascript",
       "filename": "soundmanager2-min.js",
       "file": "javascripts/soundmanager2-min.js",
       "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "image",
-      "filename": "play-red.png",
-      "file": "images/play-red.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "pause.png",
-      "file": "images/pause.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "play-white.png",
-      "file": "images/play-white.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "play-red-ringed.png",
-      "file": "images/play-red-ringed.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "play-white-ringed.png",
-      "file": "images/play-white-ringed.png",
-      "content_type": "image/png"
     },
     {
       "kind": "stylesheet",
@@ -603,12 +355,6 @@
       "kind": "stylesheet",
       "filename": "spinner.css",
       "file": "stylesheets/spinner.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "2014-mobile-nobounce.css",
-      "file": "stylesheets/2014-mobile-nobounce.css",
       "content_type": "text/css"
     }
   ]
