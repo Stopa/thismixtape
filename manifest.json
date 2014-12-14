@@ -131,8 +131,8 @@
     },
     {
       "kind": "stylesheet",
-      "filename": "faq.css",
-      "file": "stylesheets/faq.css",
+      "filename": "thismixtape.css",
+      "file": "stylesheets/thismixtape.css",
       "content_type": "text/css"
     },
     {
@@ -230,6 +230,12 @@
       "filename": "tsr.jpg",
       "file": "images/tsr.jpg",
       "content_type": "image/jpeg"
+    },
+    {
+      "kind": "javascript",
+      "filename": "thismixtape.js",
+      "file": "javascripts/thismixtape.js",
+      "content_type": "application/x-javascript"
     },
     {
       "kind": "javascript",

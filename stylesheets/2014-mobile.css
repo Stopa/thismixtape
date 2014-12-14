@@ -1,102 +1,104 @@
 /* stepanBolotnikov & tajoOja | fraktal */
-body {
-  background: black;
-}
-header {
-  transform: translateX(-207px);
-  transition: transform 200ms linear;
-  z-index: 4;
-}
-.frontpage header {
-  transform: translateX(-60px);
-}
-.frontpage header.has-submenu {
-  transform: translateX(-207px);
-}
-  .logo {
-    position: absolute;
-    left: 207px;
+@media screen and (max-width: 600px) {
+  body {
+    background: black;
   }
-  .frontpage .logo {
-    left: 60px;
+  header {
+    transform: translateX(-207px);
+    transition: transform 200ms linear;
+    z-index: 4;
   }
-  .frontpage .has-submenu .logo {
-    left: 207px;
+  .frontpage header {
+    transform: translateX(-60px);
   }
-  .main-nav {
-    height: 100%;
-    overflow: auto;
+  .frontpage header.has-submenu {
+    transform: translateX(-207px);
   }
-    .main-nav ol {
-      margin-top: 0;
+    .logo {
+      position: absolute;
+      left: 207px;
     }
-      .main-nav a:hover {
-        background: none;
-        color: white;
+    .frontpage .logo {
+      left: 60px;
+    }
+    .frontpage .has-submenu .logo {
+      left: 207px;
+    }
+    .main-nav {
+      height: 100%;
+      overflow: auto;
+    }
+      .main-nav ol {
+        margin-top: 0;
       }
-      .main-nav .active a:hover {
-        background: white;
-        color: #DC2810;
-      }
-      .main-nav .active a:after {
-        content: none;
-      }
-.wrapper > nav {
-  position: fixed;
-  top: 0;
-  left: 60px;
-  display: none;
-  z-index: 3;
-  box-shadow: 0 0 0 black;
-  height: 100%;
-  overflow: visible;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding-left: 0;
-  transform: translateX(-206px);
-  transition: transform 200ms linear, box-shadow 200ms linear;
-}
-.wrapper > nav.active {
-  display: block;
-}
-.frontpage .wrapper > nav.active {
-  display: none;
-}
-.frontpage.menu-opened .wrapper > nav.active {
-  display: block;
-}
-.wrapper > section {
-  background-attachment: scroll;
-  background-position: top right;
-  background-size: auto 900px;
-  padding: 0 15px;
-}
-  .shadow {
-    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-    height: 900px;
+        .main-nav a:hover {
+          background: none;
+          color: white;
+        }
+        .main-nav .active a:hover {
+          background: white;
+          color: #DC2810;
+        }
+        .main-nav .active a:after {
+          content: none;
+        }
+  .wrapper > nav {
+    position: fixed;
+    top: 0;
+    left: 60px;
+    display: none;
+    z-index: 3;
+    box-shadow: 0 0 0 black;
+    height: 100%;
+    overflow: visible;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 0;
+    transform: translateX(-206px);
+    transition: transform 200ms linear, box-shadow 200ms linear;
   }
-  .content {
-    width: auto;
-  }
-  .frontpage .content {
-    width: auto;
+  .wrapper > nav.active {
     display: block;
-    padding-top: 100px;
-    padding-bottom: 100px;
   }
-  h1 {
-    width: auto;
-    font-size: 75px;
-    white-space: normal;
+  .frontpage .wrapper > nav.active {
+    display: none;
+  }
+  .frontpage.menu-opened .wrapper > nav.active {
+    display: block;
+  }
+  .wrapper > section {
+    background-attachment: scroll;
+    background-position: top right;
+    background-size: auto 900px;
+    padding: 0 15px;
+  }
+    .shadow {
+      background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+      height: 900px;
+    }
+    .content {
+      width: auto;
+    }
+    .frontpage .content {
+      width: auto;
+      display: block;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    h1 {
+      width: auto;
+      font-size: 75px;
+      white-space: normal;
+    }
+
+  .menu-opened header,
+  .menu-opened .wrapper > nav,
+  .frontpage.menu-opened header.has-submenu {
+    transform: translateX(0);
+  }
+  .menu-opened .wrapper > nav {
+    box-shadow: 0 0 60px black;
   }
 
-.menu-opened header,
-.menu-opened .wrapper > nav,
-.frontpage.menu-opened header.has-submenu {
-  transform: translateX(0);
+  .standalone .subnav ol {padding-top: 20px;}
 }
-.menu-opened .wrapper > nav {
-  box-shadow: 0 0 60px black;
-}
-
-.standalone .subnav ol {padding-top: 20px;}

@@ -26,12 +26,7 @@
 <link rel="apple-touch-icon" href="/images/icon152.png" sizes="152x152">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-{% stylesheet_link "2014-style.css?tmis" %}
-{% stylesheet_link "360player.css?tmis2" %}
-{% stylesheet_link "360-custom.css?tmis" %}
-{% stylesheet_link "grain.css?tmis" %}
-{% stylesheet_link "spinner.css?tmis" %}
-<link media="screen and (max-width: 600px)" rel="stylesheet" type="text/css" href="/stylesheets/2014-mobile.css" />
+{% stylesheet_link "thismixtape.css?1" %}
 <title>{% if site.root_item.current? %}This Mixtape Is So...{% else %}This Mixtape Is So {{page.title}} {% for i in site.menuitems %}{% if i.selected? %}{{i.title}}{% endif %}{% endfor %}{% endif %}</title>
 <script>
 <!--

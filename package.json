@@ -1,0 +1,17 @@
+{
+  "name": "thismixtape",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Stopa/thismixtape",
+  "authors": [
+    "Stepan Bolotnikov <stepan@fraktal.ee>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-bowercopy": "~1.1.0",
+    "grunt-autoprefixer": "~1.0.1",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-cssmin": "~0.10.0"
+  }
+}

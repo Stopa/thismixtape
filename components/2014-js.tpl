@@ -1,10 +1,7 @@
 <div class="spinner-wrapper"><div class="spinner"></div></div>
-<script src="/javascripts/jquery.js?1"></script>
-<script src="/javascripts/prefixfree.js?1"></script>
-<script src="/javascripts/2014-scripts.js?2"></script>
-<script src="/javascripts/berniecode-animator.js?1"></script>
-<script src="/javascripts/soundmanager2-min.js?1"></script>
-<script src="/javascripts/360player.js?2"></script>
+
+<script src="{{ javascripts_path }}/thismixtape.js"></script>
+
 <script>{% unless editmode %}
     if($('#player').length) {
        $('#player a').attr('href', $('#player a').attr('href').replace(/<(?:.|\n)*?>/gm, ''));
@@ -35,4 +32,5 @@ if($('.main-content').outerHeight() < $('.subnav:visible').height()) {
 if(navigator.standalone) {$('body').addClass('standalone');}
 </script>
 {% endunless %}
-{% unless editmode %}{{site.analytics}}{% endunless %}
+
+{{site.analytics}}
