@@ -23,7 +23,7 @@
 <script>
 $(function() {
   if(!navigator.userAgent.match(/iPhone/) && !navigator.userAgent.match(/iPod/)) {
-    $(document.body).prepend('<video autoplay="true" loop="true"><source src="http://tmis.planet.ee/files/tmisvideo.webm" media="screen and (min-width:600px)" type="video/webm" /><source src="http://tmis.planet.ee/files/tmisvideo.mp4" media="screen and (min-width:600px)" type="video/mp4" /></video>');
+    $(document.body).prepend('<video autoplay="true" loop="true"><source src="http://cdn.thismixtape.com/video/tmisvideo.webm" media="screen and (min-width:600px)" type="video/webm" /><source src="http://cdn.thismixtape.com/video/tmisvideo.mp4" media="screen and (min-width:600px)" type="video/mp4" /></video>');
   }
 });
 </script>
