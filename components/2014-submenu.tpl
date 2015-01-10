@@ -1,7 +1,15 @@
 {% for i in site.menuitems_with_hidden %}
 <nav class="subnav{% if i.selected? %} active{% endif %}">
-  <ol>{% for i2 in i.children %}
-    <li{% if i2.selected? %} class="active"{% endif %}><a href="{{i2.url}}">{{i2.title}}</a></li>{% endfor %}{% if editmode %}
+  <ol>
+    {% elementscontext edicy_page_path_var="i.path" %}
+    {% for element in elements %}
+    <li{% if element.selected? %} class="active"{% endif %}><a href="{{ element.url }}">{{ element.title }}</a></li>{% endfor %}
+    {% endelementscontext %}
+    {% for level2 in i.children %}
+    <li{% if level2.selected? %} class="active"{% endif %}><a href="{{ level2.url }}">{{ level2.title }}</a></li>
+    {% endfor %}
+    {% if editmode %}
+    <li><a href="{{ i.url }}?new">Lisa mixtape</a></li>
     <li>{% menuadd parent="i" %}</li>
     {% endif %}
   </ol>
