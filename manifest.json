@@ -1,353 +1,384 @@
 {
+  "description": "New design",
+  "name": "New design",
+  "preview_medium": "",
+  "preview_small": "",
+  "author": "",
   "layouts": [
     {
-      "title": "Front page",
-      "layout_name": "front_page",
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl"
-    },
-    {
-      "title": "Common page",
-      "layout_name": "common_page",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/common_page.tpl"
-    },
-    {
-      "title": "B-sides",
+      "file": "layouts/b-sides.tpl",
       "layout_name": "b-sides",
+      "title": "B-sides"
+    },
+    {
       "content_type": "page",
       "component": false,
-      "file": "layouts/b-sides.tpl"
+      "file": "layouts/common_page.tpl",
+      "layout_name": "common_page",
+      "title": "Common page"
     },
     {
-      "title": "2014-Common page",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "front_page",
+      "title": "Front page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/mixtape.tpl",
+      "layout_name": "page_default",
+      "title": "Mixtape"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/mixtapes.tpl",
+      "layout_name": "page_default",
+      "title": "Mixtapes"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/2014-common_page.tpl",
       "layout_name": "2014-common_page",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2014-common_page.tpl"
+      "title": "2014-Common page"
     },
     {
-      "title": "2014-Siteheader",
-      "layout_name": "2014-siteheader",
       "content_type": "component",
       "component": true,
-      "file": "components/2014-siteheader.tpl"
-    },
-    {
-      "title": "2014-Mainmenu",
-      "layout_name": "2014-mainmenu",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2014-mainmenu.tpl"
-    },
-    {
-      "title": "2014-Submenu",
-      "layout_name": "2014-submenu",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2014-submenu.tpl"
-    },
-    {
-      "title": "2014-JS",
-      "layout_name": "2014-js",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2014-js.tpl"
-    },
-    {
-      "title": "splash",
-      "layout_name": "splash",
-      "content_type": "component",
-      "component": true,
-      "file": "components/splash.tpl"
-    },
-    {
-      "title": "2014-Front page",
-      "layout_name": "2014-front_page",
-      "content_type": "component",
-      "component": true,
-      "file": "components/2014-front_page.tpl"
-    },
-    {
-      "title": "2014-B-sides",
+      "file": "components/2014-b-sides.tpl",
       "layout_name": "2014-b-sides",
+      "title": "2014-B-sides"
+    },
+    {
       "content_type": "component",
       "component": true,
-      "file": "components/2014-b-sides.tpl"
+      "file": "components/2014-front_page.tpl",
+      "layout_name": "2014-front_page",
+      "title": "2014-Front page"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/2014-js.tpl",
+      "layout_name": "2014-js",
+      "title": "2014-JS"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/2014-mainmenu.tpl",
+      "layout_name": "2014-mainmenu",
+      "title": "2014-Mainmenu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/2014-siteheader.tpl",
+      "layout_name": "2014-siteheader",
+      "title": "2014-Siteheader"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/2014-submenu.tpl",
+      "layout_name": "2014-submenu",
+      "title": "2014-Submenu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/splash.tpl",
+      "layout_name": "splash",
+      "title": "splash"
     }
   ],
   "assets": [
     {
-      "kind": "javascript",
-      "filename": "360player.js",
-      "file": "javascripts/360player.js",
-      "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "javascript",
-      "filename": "berniecode-animator.js",
-      "file": "javascripts/berniecode-animator.js",
-      "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "360player.css",
-      "file": "stylesheets/360player.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "image",
-      "filename": "empty.gif",
-      "file": "images/empty.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "image",
-      "filename": "icon_loading_spinner_bigger.gif",
-      "file": "images/icon_loading_spinner_bigger.gif",
-      "content_type": "image/gif"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "360-custom.css",
-      "file": "stylesheets/360-custom.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "thismixtape.css",
-      "file": "stylesheets/thismixtape.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "fonts.css",
-      "file": "stylesheets/fonts.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "font",
-      "filename": "download.svg",
-      "file": "assets/download.svg",
-      "content_type": "image/svg+xml"
-    },
-    {
-      "kind": "font",
-      "filename": "facebook.svg",
-      "file": "assets/facebook.svg",
-      "content_type": "image/svg+xml"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-bold-webfont.eot",
-      "file": "assets/graphik-bold-webfont.eot",
-      "content_type": "font/eot"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-bold-webfont.woff",
-      "file": "assets/graphik-bold-webfont.woff",
-      "content_type": "font/woff"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-bold-webfont.svg",
-      "file": "assets/graphik-bold-webfont.svg",
-      "content_type": "image/svg+xml"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-light-webfont.eot",
-      "file": "assets/graphik-light-webfont.eot",
-      "content_type": "font/eot"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-bold-webfont.ttf",
-      "file": "assets/graphik-bold-webfont.ttf",
-      "content_type": "font/ttf"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-light-webfont.svg",
-      "file": "assets/graphik-light-webfont.svg",
-      "content_type": "image/svg+xml"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-light-webfont.ttf",
-      "file": "assets/graphik-light-webfont.ttf",
-      "content_type": "font/ttf"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-light-webfont.woff",
-      "file": "assets/graphik-light-webfont.woff",
-      "content_type": "font/woff"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-regular-webfont.eot",
-      "file": "assets/graphik-regular-webfont.eot",
-      "content_type": "font/eot"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-regular-webfont.svg",
-      "file": "assets/graphik-regular-webfont.svg",
-      "content_type": "image/svg+xml"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-regular-webfont.woff",
-      "file": "assets/graphik-regular-webfont.woff",
-      "content_type": "font/woff"
-    },
-    {
-      "kind": "font",
-      "filename": "graphik-regular-webfont.ttf",
-      "file": "assets/graphik-regular-webfont.ttf",
-      "content_type": "font/ttf"
-    },
-    {
-      "kind": "image",
-      "filename": "tsr.jpg",
-      "file": "images/tsr.jpg",
-      "content_type": "image/jpeg"
-    },
-    {
-      "kind": "javascript",
-      "filename": "thismixtape.js",
-      "file": "javascripts/thismixtape.js",
-      "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "javascript",
-      "filename": "prefixfree.js",
-      "file": "javascripts/prefixfree.js",
-      "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "javascript",
-      "filename": "jquery.js",
-      "file": "javascripts/jquery.js",
-      "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "javascript",
-      "filename": "2014-scripts.js",
-      "file": "javascripts/2014-scripts.js",
-      "content_type": "text/javascript"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "2014-style.css",
-      "file": "stylesheets/2014-style.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "2014-mobile.css",
-      "file": "stylesheets/2014-mobile.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "javascript",
-      "filename": "soundmanager2-min.js",
-      "file": "javascripts/soundmanager2-min.js",
-      "content_type": "application/x-javascript"
-    },
-    {
-      "kind": "stylesheet",
-      "filename": "grain.css",
-      "file": "stylesheets/grain.css",
-      "content_type": "text/css"
-    },
-    {
-      "kind": "font",
-      "filename": "circle-red.svg",
+      "content_type": "image/svg+xml",
       "file": "assets/circle-red.svg",
-      "content_type": "image/svg+xml"
+      "kind": "font",
+      "filename": "circle-red.svg"
     },
     {
+      "content_type": "image/svg+xml",
+      "file": "assets/download.svg",
       "kind": "font",
-      "filename": "pause-white.svg",
+      "filename": "download.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/facebook.svg",
+      "kind": "font",
+      "filename": "facebook.svg"
+    },
+    {
+      "content_type": "font/eot",
+      "file": "assets/graphik-bold-webfont.eot",
+      "kind": "font",
+      "filename": "graphik-bold-webfont.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/graphik-bold-webfont.svg",
+      "kind": "font",
+      "filename": "graphik-bold-webfont.svg"
+    },
+    {
+      "content_type": "font/ttf",
+      "file": "assets/graphik-bold-webfont.ttf",
+      "kind": "font",
+      "filename": "graphik-bold-webfont.ttf"
+    },
+    {
+      "content_type": "font/woff",
+      "file": "assets/graphik-bold-webfont.woff",
+      "kind": "font",
+      "filename": "graphik-bold-webfont.woff"
+    },
+    {
+      "content_type": "font/eot",
+      "file": "assets/graphik-light-webfont.eot",
+      "kind": "font",
+      "filename": "graphik-light-webfont.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/graphik-light-webfont.svg",
+      "kind": "font",
+      "filename": "graphik-light-webfont.svg"
+    },
+    {
+      "content_type": "font/ttf",
+      "file": "assets/graphik-light-webfont.ttf",
+      "kind": "font",
+      "filename": "graphik-light-webfont.ttf"
+    },
+    {
+      "content_type": "font/woff",
+      "file": "assets/graphik-light-webfont.woff",
+      "kind": "font",
+      "filename": "graphik-light-webfont.woff"
+    },
+    {
+      "content_type": "font/eot",
+      "file": "assets/graphik-regular-webfont.eot",
+      "kind": "font",
+      "filename": "graphik-regular-webfont.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/graphik-regular-webfont.svg",
+      "kind": "font",
+      "filename": "graphik-regular-webfont.svg"
+    },
+    {
+      "content_type": "font/ttf",
+      "file": "assets/graphik-regular-webfont.ttf",
+      "kind": "font",
+      "filename": "graphik-regular-webfont.ttf"
+    },
+    {
+      "content_type": "font/woff",
+      "file": "assets/graphik-regular-webfont.woff",
+      "kind": "font",
+      "filename": "graphik-regular-webfont.woff"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/pause-white.svg",
-      "content_type": "image/svg+xml"
+      "kind": "font",
+      "filename": "pause-white.svg"
     },
     {
-      "kind": "font",
-      "filename": "play-red.svg",
+      "content_type": "image/svg+xml",
       "file": "assets/play-red.svg",
-      "content_type": "image/svg+xml"
-    },
-    {
       "kind": "font",
-      "filename": "play-white.svg",
+      "filename": "play-red.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/play-white.svg",
-      "content_type": "image/svg+xml"
+      "kind": "font",
+      "filename": "play-white.svg"
     },
     {
+      "content_type": "image/gif",
+      "file": "images/empty.gif",
       "kind": "image",
-      "filename": "icon72.png",
-      "file": "images/icon72.png",
-      "content_type": "image/png"
+      "filename": "empty.gif"
     },
     {
-      "kind": "image",
-      "filename": "icon76.png",
-      "file": "images/icon76.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "icon57.png",
-      "file": "images/icon57.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "icon114.png",
+      "content_type": "image/png",
       "file": "images/icon114.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "icon114.png"
     },
     {
-      "kind": "image",
-      "filename": "icon120.png",
+      "content_type": "image/png",
       "file": "images/icon120.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "icon120.png"
     },
     {
-      "kind": "image",
-      "filename": "icon144.png",
-      "file": "images/icon144.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "icon152.png",
-      "file": "images/icon152.png",
-      "content_type": "image/png"
-    },
-    {
-      "kind": "image",
-      "filename": "icon128.png",
+      "content_type": "image/png",
       "file": "images/icon128.png",
-      "content_type": "image/png"
-    },
-    {
       "kind": "image",
-      "filename": "icon196.png",
-      "file": "images/icon196.png",
-      "content_type": "image/png"
+      "filename": "icon128.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/icon144.png",
+      "kind": "image",
+      "filename": "icon144.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/icon152.png",
+      "kind": "image",
+      "filename": "icon152.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/icon196.png",
+      "kind": "image",
+      "filename": "icon196.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/icon57.png",
+      "kind": "image",
+      "filename": "icon57.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/icon72.png",
+      "kind": "image",
+      "filename": "icon72.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/icon76.png",
+      "kind": "image",
+      "filename": "icon76.png"
+    },
+    {
+      "content_type": "image/gif",
+      "file": "images/icon_loading_spinner_bigger.gif",
+      "kind": "image",
+      "filename": "icon_loading_spinner_bigger.gif"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/tsr.jpg",
+      "kind": "image",
+      "filename": "tsr.jpg"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/2014-scripts.js",
+      "kind": "javascript",
+      "filename": "2014-scripts.js"
+    },
+    {
+      "content_type": "application/x-javascript",
+      "file": "javascripts/360player.js",
+      "kind": "javascript",
+      "filename": "360player.js"
+    },
+    {
+      "content_type": "application/x-javascript",
+      "file": "javascripts/berniecode-animator.js",
+      "kind": "javascript",
+      "filename": "berniecode-animator.js"
+    },
+    {
+      "content_type": "application/x-javascript",
+      "file": "javascripts/jquery.js",
+      "kind": "javascript",
+      "filename": "jquery.js"
+    },
+    {
+      "content_type": "application/x-javascript",
+      "file": "javascripts/prefixfree.js",
+      "kind": "javascript",
+      "filename": "prefixfree.js"
+    },
+    {
+      "content_type": "application/x-javascript",
+      "file": "javascripts/soundmanager2-min.js",
+      "kind": "javascript",
+      "filename": "soundmanager2-min.js"
+    },
+    {
+      "content_type": "application/x-javascript",
+      "file": "javascripts/thismixtape.js",
+      "kind": "javascript",
+      "filename": "thismixtape.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/transferer.js",
+      "kind": "javascripts",
+      "filename": "transferer.js"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/2014-mobile-nobounce.css",
+      "kind": "stylesheets",
+      "filename": "2014-mobile-nobounce.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/2014-mobile.css",
       "kind": "stylesheet",
-      "filename": "spinner.css",
+      "filename": "2014-mobile.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/2014-style.css",
+      "kind": "stylesheet",
+      "filename": "2014-style.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/360-custom.css",
+      "kind": "stylesheet",
+      "filename": "360-custom.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/360player.css",
+      "kind": "stylesheet",
+      "filename": "360player.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/fonts.css",
+      "kind": "stylesheet",
+      "filename": "fonts.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/grain.css",
+      "kind": "stylesheet",
+      "filename": "grain.css"
+    },
+    {
+      "content_type": "text/css",
       "file": "stylesheets/spinner.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "spinner.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/thismixtape.css",
+      "kind": "stylesheet",
+      "filename": "thismixtape.css"
     }
   ]
 }

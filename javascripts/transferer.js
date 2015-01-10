@@ -12,7 +12,6 @@ function transferPagesToElements(requestURL) {
   $.getJSON(requestURL, function(pagesData, textStatus, pagesxhr) {
     pagesData.forEach(function(page, pageIndex, pages) {
       if (!page.root) { // do NOTHING with root page
-        //TODO: there is also b-sides
         var pageIsSecondLevel = page.path.match(/\//); // second-level pages are years, not mixtapes
 
         if (pageIsSecondLevel) {
@@ -31,46 +30,64 @@ function transferPagesToElements(requestURL) {
             contentType: 'application/json',
             dataType: 'json',
             success: function(response) {
-              yearPages[response.slug] = response.id;
+              yearPages[response.slug] = {
+                page_id: response.id,
+                node_id: response.node.id
+              }
             }
           });
         } else {
-          // create new element
-
-          var contentXHRs = [];
-
-          $.getJSON(page.contents_url, function(pageContentsData) {
-            var contentsObject = {};
-
-            pageContentsData.forEach(function(contentElement, contentElementIndex, contentElements) {
-              var contentXHR = $.getJSON(contentElement.text.url, function(contentTextData) {
-                contentsObject[contentElement.name] = contentTextData.body;
-              });
-
-              contentXHRs.push(contentXHR);
-            });
-          });
-
-          $.when.apply($, contentXHRs).done(function() {
+          if (page.layout.title == 'B-sides') {
+          //TODO: there is also b-sides
+           // if layout is b sides then move the child
             $.ajax({
-              type: 'post',
-              url: '/admin/api/elements',
+              type: 'put',
+              url: page.node.url+'/move',
               dataType: 'json',
               contentType: 'application/json',
               data: JSON.stringify({
-                element_definition_id: elementDefinitionID,
-                page_id: yearPages[page.path.split('/')[0]],
-                title: page.title,
-                values: {
-                  'track_path': contentsObject['player'],
-                  'artist_links': contentsObject['artist-links'],
-                  'body': contentsObject['body'],
-                  'background_image': contentsObject['photo'],
-                  'opengraph_image': contentsObject['og']
-                }
+                parent_id: yearPages[page.path.split('/')[0]].node_id
               })
+            })
+
+          } else {
+            // create new element
+
+            var contentXHRs = [];
+
+            $.getJSON(page.contents_url, function(pageContentsData) {
+              var contentsObject = {};
+
+              pageContentsData.forEach(function(contentElement, contentElementIndex, contentElements) {
+                var contentXHR = $.getJSON(contentElement.text.url, function(contentTextData) {
+                  contentsObject[contentElement.name] = contentTextData.body;
+                });
+
+                contentXHRs.push(contentXHR);
+              });
             });
-          });
+
+            $.when.apply($, contentXHRs).done(function() {
+              $.ajax({
+                type: 'post',
+                url: '/admin/api/elements',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                  element_definition_id: elementDefinitionID,
+                  page_id: yearPages[page.path.split('/')[0]].page_id,
+                  title: page.title,
+                  values: {
+                    'track_path': contentsObject['player'],
+                    'artist_links': contentsObject['artist-links'],
+                    'body': contentsObject['body'],
+                    'background_image': contentsObject['photo'],
+                    'opengraph_image': contentsObject['og']
+                  }
+                })
+              });
+            });
+          }
         }
       }
     });
