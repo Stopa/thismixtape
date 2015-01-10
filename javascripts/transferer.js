@@ -9,104 +9,124 @@ var elementsLayoutID, // layout ID for the elements page
 function transferPagesToElements(requestURL) {
   var url = requestURL || '/admin/api/pages';
 
-  $.getJSON(requestURL, function(pagesData, textStatus, pagesxhr) {
-    pagesData.forEach(function(page, pageIndex, pages) {
-      if (!page.root) { // do NOTHING with root page
-        var pageIsSecondLevel = page.path.match(/\//); // second-level pages are years, not mixtapes
-
-        if (pageIsSecondLevel) {
-          // create new elements page
-          $.ajax({
-            type: 'post',
-            url: '/admin/api/pages',
-            data: JSON.stringify({
-              title: page.title,
-              layout_id: elementsLayoutID,
-              parent_id: elementsParentID,
-              hidden: page.hidden,
-              publishing: page.publishing,
-              isprivate: page.isprivate
-            }),
-            contentType: 'application/json',
-            dataType: 'json',
-            success: function(response) {
-              yearPages[response.slug] = {
-                page_id: response.id,
-                node_id: response.node.id
-              }
-            }
-          });
-        } else {
-          if (page.layout.title == 'B-sides') {
-          //TODO: there is also b-sides
-           // if layout is b sides then move the child
-            $.ajax({
-              type: 'put',
-              url: page.node.url+'/move',
-              dataType: 'json',
-              contentType: 'application/json',
-              data: JSON.stringify({
-                parent_id: yearPages[page.path.split('/')[0]].node_id
-              })
-            })
-
-          } else {
-            // create new element
-
-            var contentXHRs = [];
-
-            $.getJSON(page.contents_url, function(pageContentsData) {
-              var contentsObject = {};
-
-              pageContentsData.forEach(function(contentElement, contentElementIndex, contentElements) {
-                var contentXHR = $.getJSON(contentElement.text.url, function(contentTextData) {
-                  contentsObject[contentElement.name] = contentTextData.body;
-                });
-
-                contentXHRs.push(contentXHR);
-              });
-            });
-
-            $.when.apply($, contentXHRs).done(function() {
-              $.ajax({
-                type: 'post',
-                url: '/admin/api/elements',
-                dataType: 'json',
-                contentType: 'application/json',
-                data: JSON.stringify({
-                  element_definition_id: elementDefinitionID,
-                  page_id: yearPages[page.path.split('/')[0]].page_id,
-                  title: page.title,
-                  values: {
-                    'track_path': contentsObject['player'],
-                    'artist_links': contentsObject['artist-links'],
-                    'body': contentsObject['body'],
-                    'background_image': contentsObject['photo'],
-                    'opengraph_image': contentsObject['og']
-                  }
-                })
-              });
-            });
-          }
-        }
-      }
-    });
-
+  $.getJSON(url, function(pagesData, textStatus, pagesxhr) {
     var linkHeader = pagesxhr.getResponseHeader('Link'),
         linkHeaderParts = linkHeader.split(','),
         linkHeaderObject = {};
 
     linkHeaderParts.forEach(function(linkHeaderPart, linkHeaderIndex, linkHeaders) {
-      var key = linkHeaderPart.match(/rel\=\"([^\=]+)\"/),
+      var key = linkHeaderPart.match(/rel\=\"([^\=]+)\"/)[1],
           value = linkHeaderPart.match(/\<([^\>]+)\>/);
 
       linkHeaderObject[key] = value;
     });
 
-    if (linkHeaderObject.next) {
-      transferPagesToElements(linkHeaderObject.next);
-    }
+    transferPage(pagesData[0], pagesData.slice(1), linkHeaderObject.next);
   });
+}
+
+function transferPage(page, pagesArray, nextLink) {
+  if (!page.root && page.path.indexOf('elements') == -1) { // do NOTHING with root page & with any page that is child of 'elements'
+    var pageIsSecondLevel = page.path.match(/\//); // second-level pages are years, not mixtapes
+
+    if (pageIsSecondLevel === null) {
+      // create new elements page
+      $.ajax({
+        type: 'post',
+        url: '/admin/api/pages',
+        data: JSON.stringify({
+          title: page.title,
+          slug: page.slug,
+          layout_id: elementsLayoutID,
+          parent_id: elementsParentID,
+          hidden: page.hidden,
+          publishing: page.publishing,
+          isprivate: page.isprivate
+        }),
+        contentType: 'application/json',
+        dataType: 'json',
+        success: function(response) {
+          yearPages[response.slug] = {
+            page_id: response.id,
+            node_id: response.node.id
+          };
+
+          nextPage(pagesArray, nextLink);
+        }
+      });
+    } else {
+      if (page.layout.title == 'B-sides') {
+      //TODO: there is also b-sides
+       // if layout is b sides then move the child
+        $.ajax({
+          type: 'put',
+          url: page.node.url+'/move',
+          dataType: 'json',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            parent_id: yearPages[page.path.split('/')[0]].node_id
+          }),
+          success: function() {
+            nextPage(pagesArray, nextLink);
+          }
+        })
+
+      } else {
+        // create new element
+
+        var contentXHRs = [],
+            contentsObject = {};
+
+        $.getJSON(page.contents_url, {}, function(pageContentsData) {
+
+          pageContentsData.forEach(function(contentElement, contentElementIndex, contentElements) {
+            var contentXHR = $.getJSON(contentElement.text.url, function(contentTextData) {
+              contentsObject[contentElement.name] = contentTextData.body;
+            });
+
+            contentXHRs.push(contentXHR);
+          });
+
+          $.when.apply($, contentXHRs).done(function() {
+          $.ajax({
+            type: 'post',
+            url: '/admin/api/elements',
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify({
+              element_definition_id: elementDefinitionID,
+              page_id: yearPages[page.path.split('/')[0]].page_id,
+              title: page.title,
+              values: {
+                'track_path': contentsObject['player'],
+                'artist_links': contentsObject['artist-links'],
+                'body': contentsObject['body'],
+                'background_image': contentsObject['photo'],
+                'opengraph_image': contentsObject['og']
+              }
+            }),
+            success: function() {
+              nextPage(pagesArray, nextLink);
+            }
+          });
+        });
+        });
+      }
+    }
+  } else {
+    nextPage(pagesArray, nextLink);
+  }
+}
+
+function nextPage(pagesArray, nextLink) {
+  console.log(pagesArray.length)
+  if (pagesArray.length > 0) {
+    transferPage(pagesArray[0], pagesArray.slice(1));
+  } else {
+    if (nextLink) {
+      transferPagesToElements(nextLink);
+    }
+  }
 }
 
 function createElementDefinition() {
@@ -175,5 +195,5 @@ function getLayoutIDs() {
 }
 
 function run() {
-  $.when(getRootPage(), getLayoutIDs()).done(transferPagesToElements);
+  $.when(getRootPage(), getLayoutIDs()).done(function() {transferPagesToElements();});
 }

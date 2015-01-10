@@ -303,3 +303,5 @@ header {
 }
 .standalone header {padding-top: 20px;}
 .standalone:before {content: '';position: fixed;top: 0;left: 0;height: 20px;width: 100%;background: black;z-index: 100000;}
+
+.placeholder {color: inherit !important; opacity: 0.5;}
