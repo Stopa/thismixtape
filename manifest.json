@@ -1,20 +1,6 @@
 {
   "layouts": [
     {
-      "title": "Mainmenu",
-      "layout_name": "mainmenu",
-      "content_type": "component",
-      "component": true,
-      "file": "components/mainmenu.tpl"
-    },
-    {
-      "title": "Submenu",
-      "layout_name": "submenu",
-      "content_type": "component",
-      "component": true,
-      "file": "components/submenu.tpl"
-    },
-    {
       "title": "Front page",
       "layout_name": "front_page",
       "content_type": "page",
