@@ -210,10 +210,10 @@ header {
     font-family: 'Graphik';
     font-size: 100px;
     letter-spacing: -0.03em;
-    width: 460px;
     line-height: 0.845;
     margin: 0 0 30px;
-    white-space: nowrap;
+    position: relative;
+    max-width: 550px;
   }
     h1 i {
       font-style: normal;
@@ -297,6 +297,36 @@ header {
       .bsides .main-content ul a:hover {
         background: #DC2810;
       }
+
+.newsletter-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: #dc2810 url('../assets/newsletter-icon.svg?1') no-repeat 20px center;
+  max-width: 0;
+  padding: 14px 6px 14px 71px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  transition: max-width 300ms ease-in;
+  white-space: nowrap;
+}
+.newsletter-button:hover {
+  max-width: 500px;
+}
+  .newsletter-button span {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .newsletter-button span:after {
+    content: '›';
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 33px;
+    margin-left: 5px;
+  }
 
 #sm2-container {
   display: none;

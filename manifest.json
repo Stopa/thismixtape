@@ -95,6 +95,13 @@
       "file": "components/splash.tpl",
       "layout_name": "splash",
       "title": "splash"
+    },
+    {
+      "title": "newsletter button",
+      "layout_name": "newsletter-button",
+      "content_type": "component",
+      "component": true,
+      "file": "components/newsletter-button.tpl"
     }
   ],
   "assets": [
@@ -379,6 +386,12 @@
       "file": "stylesheets/thismixtape.css",
       "kind": "stylesheet",
       "filename": "thismixtape.css"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "kind": "assets",
+      "file": "assets/newsletter-icon.svg",
+      "filename": "newsletter-icon.svg"
     }
   ]
 }

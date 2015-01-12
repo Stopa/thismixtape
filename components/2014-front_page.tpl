@@ -19,6 +19,7 @@
     </section>
   </div>
 </div></div></div>
+{% include "newsletter button" %}
 {% include "2014-JS" %}
 <script>
 $(function() {
