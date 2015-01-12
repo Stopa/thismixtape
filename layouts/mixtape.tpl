@@ -59,9 +59,9 @@
       <div class="shadow"></div>
       <div class="content">
         <div id="player" class="ui360"><a href="http://cdn.thismixtape.com/{{ element.track_path }}"></a></div> 
-        {% if editmode %}Elementsi nimi (menüüsse):
-        {% editable element.title %}
-        {% endif %}
+      </div>
+      <h1>{% editable element.title %} <i>{{ page.title }}</i></h1>
+      <div class="content">
 
         {% editable element.body %}
 
