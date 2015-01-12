@@ -72,6 +72,7 @@
           <div style="border: 1px solid white; padding: 5px; margin: 5px 0;">Mixi aadress: cdn.thismixtape.com/{% editable element.track_path %}</div>
           <div style="border: 1px solid white; padding: 5px; margin: 5px 0;">Taustafoto: {% editable element.background_image %}</div>
           <div style="border: 1px solid white; padding: 5px; margin: 5px 0;">Facebooki pilt: {% editable element.opengraph_image %}</div>
+          <div style="border: 1px solid white; padding: 5px; margin: 5px 0;">Peida mixtape: {% editable element.hidden %}
         {% else %}<a href="http://cdn.thismixtape.com/{{ element.track_path }}" class="download-track">Download</a>{% endif %}
       </div>
     </section>
