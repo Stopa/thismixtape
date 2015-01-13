@@ -2,8 +2,8 @@
 <nav class="subnav{% if i.selected? %} active{% endif %}">
   <ol>
     {% elementscontext edicy_page_path_var="i.path" %}
-    {% for e in elements reversed %}{% unless e.hidden %}
-    <li{% if e.id == element.id %} class="active"{% endif %}><a href="{{ e.url }}">{{ e.title }}</a></li>{% endunless %}{% endfor %}
+    {% for e in elements reversed %}{% if editmode or e.hidden == false %}
+    <li{% if e.id == element.id %} class="active"{% endif %}><a href="{{ e.url }}">{{ e.title }}</a></li>{% endif %}{% endfor %}
     {% endelementscontext %}
     {% for level2 in i.children %}
     <li{% if level2.selected? %} class="active"{% endif %}><a href="{{ level2.url }}">{{ level2.title }}</a></li>
