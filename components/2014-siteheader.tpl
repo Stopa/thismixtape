@@ -6,8 +6,7 @@
 <meta property="og:site_name" content="This Mixtape is so..." />
 <meta propetry="og:url" content="{{site.url}}{{page.url}}" />
 <meta property="og:title" content="{% if site.root_item.current? %}This Mixtape Is So...{% else %}This Mixtape Is So {{page.title}} {% for i in site.menuitems %}{% if i.selected? %}{{i.title}}{% endif %}{% endfor %}{% endif %}" />
-{% unless editmode %}{% capture ogurl %}{% content name="og" %}{% endcapture %}
-<meta property="og:image" content="{{site.url}}/photos/{{ogurl | strip_html | strip_newlines | replace:" ","" }}" />{% endunless %}
+<meta property="og:image" content="{{ page.image.url }}" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="viewport" content="minimal-ui; width=device-width; user-scalable=no; initial-scale=1">
