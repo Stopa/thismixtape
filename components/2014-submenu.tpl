@@ -3,10 +3,10 @@
   <ol>
     {% elementscontext edicy_page_path_var="i.path" %}
     {% for e in elements reversed %}{% if editmode or e.hidden == false %}
-    <li{% if e.id == element.id %} class="active"{% endif %}><a href="{{ e.url }}">{{ e.title }}</a></li>{% endif %}{% endfor %}
+    <li{% if e.id == element.id %} class="active"{% endif %}><a href="{{ e.url }}" data-voog-element-id="{{ e.id }}">{{ e.title }}</a></li>{% endif %}{% endfor %}
     {% endelementscontext %}
     {% for level2 in i.children %}
-    <li{% if level2.selected? %} class="active"{% endif %}><a href="{{ level2.url }}">{{ level2.title }}</a></li>
+    <li{% if level2.selected? %} class="active"{% endif %}><a href="{{ level2.url }}" data-voog-page-id="{{ level2.page_id }}">{{ level2.title }}</a></li>
     {% endfor %}
     {% if editmode %}
     <li><a href="{{ i.url }}?new">Lisa mixtape</a></li>

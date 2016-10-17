@@ -392,6 +392,12 @@
       "kind": "assets",
       "file": "assets/newsletter-icon.svg",
       "filename": "newsletter-icon.svg"
+    },
+    {
+      "content_type": "application/javascript",
+      "kind": "javascripts",
+      "file": "javascripts/soundmanager2.js",
+      "filename": "soundmanager2.js"
     }
   ]
 }

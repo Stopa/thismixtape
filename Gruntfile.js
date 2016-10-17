@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     'javascripts/jquery.js', 
     'javascripts/2014-scripts.js', 
     'javascripts/berniecode-animator.js', 
-    'javascripts/soundmanager2-min.js', 
+    'javascripts/soundmanager2.js', 
     'javascripts/360player.js'
   ];
 
